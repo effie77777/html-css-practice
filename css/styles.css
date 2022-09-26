@@ -132,8 +132,7 @@ a:visited {
 
 .painting {
   clear: left;
-  position: relative;
-  right: 120px;
+
   text-align: center;
   font-family: 'Caveat Brush', cursive;
   border-bottom: 20px;
@@ -147,7 +146,7 @@ a:visited {
   font-family: 'Caveat Brush', cursive;
   text-align: right;
   position: relative;
-  right:120px;
+  right:50%;
   font-size: 24px;
   color: black;
   font-weight: normal;
