@@ -1,0 +1,252 @@
+/* types of "display": block, inline, inline-block, none */
+/* block elements: <p>, <h>, <li>, <form>, <div>..., the width can be changed */
+/* inline elements: <a>, <img>, <span>..., only take up the minimal space to contain the content, therefore the width cannot be changed */
+/* none: would not be displayed at all */
+
+/* types of "position": static, relative, absolute, fixed, ... */
+/* relative means which direction you want the element to be pushed away, not toward to */
+/* even if you set the position equal to relative, nothing will happen until you also give a "coordinate" which includes right, left, top and bottom */
+/* "relative": adding a margin relative to where te element should have been before modification;
+   "absolute": adding a marginto its parent element */
+
+/* the "text-align" property needs to be set within a parent container */
+
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+.first-cloud {
+  position: absolute;
+  top: 50px;
+  right: 25%;
+}
+
+.second-cloud {
+  position: absolute;
+}
+/* below we assign a specific value to the width of h1, so it's not going to be displayed in the center of the screen even if we've set that in the head section */
+/* so we use "margin" to fix that with the four numbers represent the margin to the top, right, bottom and left, and "auto" just means "center" */
+
+
+/* if we use "%" or "em" to represent the font size, then it becomes a dynamic font size. 100%=1em=16px */
+/* however the usage of dynamic font size of the parent will be inherited by its children, and in order to avoid that, we can use "rem" which stands for "root em" to tell the computer to ignore the dynamic font size inherited from the partent and just carry out the font size set specificly in the child element */
+h1 {
+  margin-top: 0;
+  padding-top: 100px;
+  width: 400px;
+  margin: 0 auto 0 auto;
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 350%;
+  line-height: 1.25;
+}
+
+h2 {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 2em;
+  color: #607EAA;
+  font-weight: normal;
+}
+
+.intro {
+  font-size: 1.5em
+}
+
+
+h3 {
+  font-family: 'Nanum Brush Script', cursive;
+  color: black;
+  font-size: 1.6em;
+}
+
+
+p {
+  font-family: 'Caveat Brush', cursive;
+  line-height: 2;
+  font-size: 16px;
+}
+
+a {
+  font-family: 'Nanum Brush Script', cursive;
+}
+
+
+.no_margin {
+  display: inline-block;
+  margin: 0;
+  padding: 0 2px;
+}
+
+a:link {
+  color: black;
+  font-family: 'Nanum Brush Script', cursive;
+  font-weight: bold;
+}
+
+a:visited {
+  color: black;
+  font-family: 'Nanum Brush Script', cursive;
+  font-weight: bold;
+}
+
+.kitten {
+  width: 40%;
+}
+
+/* types of "position": static, relative, absolute, fixed, ... */
+/* relative means which direction you want the object to be pushed away, not toward to */
+/* if you set the position equal to relative, nothing will happen until you assign it a "coordinate" which includes right, left, top and bottom */
+/* fixed means that the element would stay to the same position as the page being scrolled */
+
+/* when we set the position of top-container to be relative, it means that this container becomes the parent to be compared when it comes to position, and therefore elements within this container is going to compare their own positions with it instead of with the whole body */
+.top-container {
+  background-color: #EEF1FF;
+  position: relative;
+}
+
+
+.skill-row-1 {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.my_painting_img {
+  width: 50%;
+  margin: auto 0 auto 0;
+}
+
+.skill-row-2 {
+  width: 50%;
+  margin: 0 auto 100px auto;
+}
+
+
+.weight_training_img {
+  width: 30%;
+  position: relative;
+  left: 80px;
+}
+
+
+
+.painting {
+  clear: left;
+  position: relative;
+  right: 120px;
+  text-align: center;
+  font-family: 'Caveat Brush', cursive;
+  border-bottom: 20px;
+  font-size: 24px;
+  color: black;
+  font-weight: normal;
+}
+
+.weight-training {
+  clear: left;
+  font-family: 'Caveat Brush', cursive;
+  text-align: right;
+  position: relative;
+  right:120px;
+  font-size: 24px;
+  color: black;
+  font-weight: normal;
+}
+
+.painting_details {
+  padding-top: 15px;
+  float: right;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 2.5;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 18px;
+}
+
+.weight-training_details {
+  padding-top: 25px;
+  float: left;
+  padding-right: 10px;
+  line-height: 2.5;
+  font-family: 'Caveat Brush', cursive;
+  text-align: left;
+  position: relative;
+  left: 100px;
+  font-size: 18px;
+}
+
+hr {
+  border: dotted 10px;
+  color: #D8D8D8;
+  height: 0;
+  width:8%;
+  border-bottom: none;
+  margin: 80px auto;
+}
+
+
+.footer-link :hover {
+  background-color: #FFF9D7;
+}
+
+
+.btn {
+  background-color: white;
+  color: #607EAA;
+  margin: 0 20px 30px 20px;
+  background-color: #EEF1FF;
+  border: none;
+  text-decoration: none;
+  font-family: 'Caveat Brush', cursive;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  width: 80px;
+}
+
+.btn :hover {
+  background-color: #FFF9D7;
+}
+
+
+.btn-link {
+  color: #495C83;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Nanum Brush Script', cursive;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  width: 80px;
+}
+
+
+.contact-me {
+  color: #607EAA;
+}
+
+.contact {
+  color: #839AA8;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+
+.most-bottom {
+  margin-bottom: 0;
+  background-color: #EEEEEE;
+  margin-top: 20px;
+}
+
+.most-b-text {
+  padding-bottom: 0;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+
+.bottom-container {
+  margin-bottom: 0;
+}
